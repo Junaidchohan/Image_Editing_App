@@ -5,7 +5,20 @@ import 'package:image_editing_app/widgets/default_button.dart';
 
 abstract class EditImageViewmodel extends State<EditImageScreen> {
   TextEditingController textEditingController = TextEditingController();
+  TextEditingController creatorText = TextEditingController();
   List<TextInfo> texts = [];
+  int currentIndex = 0;
+
+  void setCurrentIndex(BuildContext context, index) {
+    setState(() {
+      currentIndex = index;
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text("Selected for Styling", style: TextStyle(fontSize: 16.0)),
+      ),
+    );
+  }
 
   void addNewText(BuildContext content) {
     setState(() {
@@ -47,7 +60,7 @@ abstract class EditImageViewmodel extends State<EditImageScreen> {
             child: Text("Back"),
           ),
           DefaultButton(
-            onPressed: () {},
+            onPressed: () => addNewText(context),
             color: Colors.red,
             textColor: Colors.white,
             child: Text("Add Text"),
