@@ -32,6 +32,30 @@ abstract class EditImageViewmodel extends State<EditImageScreen> {
     });
   }
 
+  void decreaseFontSize() {
+    setState(() {
+      texts[currentIndex].fontSize = texts[currentIndex].fontSize -= 2;
+    });
+  }
+
+  void alignLeft() {
+    setState(() {
+      texts[currentIndex].textAlign = TextAlign.left;
+    });
+  }
+
+  void alignCenter() {
+    setState(() {
+      texts[currentIndex].textAlign = TextAlign.center;
+    });
+  }
+
+  void alignRight() {
+    setState(() {
+      texts[currentIndex].textAlign = TextAlign.right;
+    });
+  }
+
   void addNewText(BuildContext content) {
     setState(() {
       texts.add(

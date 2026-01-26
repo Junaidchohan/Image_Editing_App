@@ -109,17 +109,17 @@ class _EditImageScreenState extends EditImageViewmodel {
           ),
           IconButton(
             icon: const Icon(Icons.format_align_left, color: Colors.black),
-            onPressed: () {},
+            onPressed: alignLeft,
             tooltip: 'Align left',
           ),
           IconButton(
             icon: const Icon(Icons.format_align_center, color: Colors.black),
-            onPressed: () {},
+            onPressed: alignCenter,
             tooltip: 'Align Center',
           ),
           IconButton(
             icon: const Icon(Icons.format_align_right, color: Colors.black),
-            onPressed: () {},
+            onPressed: alignRight,
             tooltip: 'Align Right',
           ),
           IconButton(
