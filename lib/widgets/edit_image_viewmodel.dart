@@ -9,6 +9,15 @@ abstract class EditImageViewmodel extends State<EditImageScreen> {
   List<TextInfo> texts = [];
   int currentIndex = 0;
 
+  void removeText() {
+    setState(() {
+      texts.removeAt(currentIndex);
+    });
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text("Deleted", style: TextStyle(fontSize: 16.0))),
+    );
+  }
+
   void setCurrentIndex(BuildContext context, index) {
     setState(() {
       currentIndex = index;
