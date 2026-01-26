@@ -99,12 +99,12 @@ class _EditImageScreenState extends EditImageViewmodel {
           ),
           IconButton(
             icon: const Icon(Icons.add, color: Colors.black),
-            onPressed: () {},
+            onPressed: increaseFontSize,
             tooltip: 'Increase font size',
           ),
           IconButton(
             icon: const Icon(Icons.remove, color: Colors.black),
-            onPressed: () {},
+            onPressed: decreaseFontSize,
             tooltip: 'Decrease font size',
           ),
           IconButton(
